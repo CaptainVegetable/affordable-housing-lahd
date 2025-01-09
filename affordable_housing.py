@@ -60,6 +60,8 @@ lahd_projects['YEAR FUNDED'] = lahd_projects['DATE FUNDED'].apply(
     lambda d: d[:4])
 lahd_projects['DATE FUNDED'] = lahd_projects['DATE FUNDED'].apply(
     lambda d: d[:10])
+lahd_projects['YEAR FUNDED'] = pd.to_datetime(lahd_projects['YEAR FUNDED'], 
+                                              format="%Y", errors='coerce')
 tdc = lahd_projects['TOTAL DEVELOPMENT COST']
 ptu = lahd_projects['PROJECT TOTAL UNITS']
 lahd_projects['COST PER HOUSING UNIT'] = tdc / ptu
@@ -314,4 +316,5 @@ def update_graph(column1_selected, column2_selected, map_layout):
     return fig
 
 # Run the Dash app
-# app.run_server(debug=True, use_reloader=False)
+if __name__ == "__main__":
+  app.run_server(debug=True, use_reloader=False)
