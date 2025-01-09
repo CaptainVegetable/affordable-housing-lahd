@@ -314,4 +314,4 @@ def update_graph(column1_selected, column2_selected, map_layout):
     return fig
 
 # Run the Dash app
-app.run_server(debug=True, use_reloader=False)
+# app.run_server(debug=True, use_reloader=False)
