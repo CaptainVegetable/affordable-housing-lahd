@@ -87,6 +87,7 @@ lahd_projects.dropna(inplace=True)
 lahd_projects_no_jobs_column.dropna(inplace=True)
 
 app = Dash()
+server = app.server
 
 section1 = [
     # Title and date stamp
