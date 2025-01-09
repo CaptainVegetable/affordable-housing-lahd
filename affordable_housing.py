@@ -88,7 +88,7 @@ lahd_projects_no_jobs_column = lahd_projects.drop(['JOBS'],
 lahd_projects.dropna(inplace=True)
 lahd_projects_no_jobs_column.dropna(inplace=True)
 
-app = Dash()
+app = Dash(__name__)
 server = app.server
 
 section1 = [
